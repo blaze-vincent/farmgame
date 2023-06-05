@@ -5,8 +5,6 @@ import com.jme3.scene.Mesh;
 import com.jme3.scene.VertexBuffer;
 import com.jme3.util.BufferUtils;
 
-import java.util.Arrays;
-
 public class TerrainMesh extends Mesh {
 
     private final int squareResolution;
