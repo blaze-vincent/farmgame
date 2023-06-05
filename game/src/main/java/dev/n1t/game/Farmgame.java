@@ -25,7 +25,8 @@ public class Farmgame extends SimpleApplication {
 
     @Override
     public void simpleInitApp() {
-        TerrainMesh terrainMesh = new TerrainMesh(3, 20);
+        TerrainMesh terrainMesh = new TerrainMesh(3, 100);
+
         Geometry geom = new Geometry("Box", terrainMesh);
 
         geom.setLocalTranslation(-8, -4, 5);
@@ -36,6 +37,13 @@ public class Farmgame extends SimpleApplication {
         mat.getAdditionalRenderState().setWireframe(true);
         geom.setMaterial(mat);
         rootNode.attachChild(geom);
+
+        terrainMesh.sphericalDepress(10, 4950, .5f);
+    }
+
+    @Override
+    public void simpleUpdate(float tpf) {
+        /* Interact with game events in the main loop */
     }
 
 }
